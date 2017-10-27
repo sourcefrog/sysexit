@@ -57,7 +57,7 @@ Converts [`std::process::ExitStatus`] to [`sysexit::Code`].
 ### [`pub fn is_success(status: std::process::ExitStatus) -> bool`]
 Determines if the provided [`std::process::ExitStatus`] was successful.
 
-### [`pub fn [is_error](status: std::process::ExitStatus) -> bool`]
+### [`pub fn is_error(status: std::process::ExitStatus) -> bool`]
 Determines if the provided [`std::process::ExitStatus`] was jnsuccessful.
 
 ### [`pub fn is_reserved(n: i32) -> bool`]
