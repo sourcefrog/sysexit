@@ -2,7 +2,7 @@
 name = "sysexit"
 version = "0.1.0"
 authors = ["Andreas Tolfsen <ato@sny.no>"]
-license = "ICS"
+license = "ISC"
 readme = "README.md"
 repository = "https://git.sny.no/sysexit-rs"
 documentation = "https://docs.rs/sysexit"
