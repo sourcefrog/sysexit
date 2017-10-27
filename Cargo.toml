@@ -1,6 +1,6 @@
 [package]
 name = "sysexit"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Andreas Tolfsen <ato@sny.no>"]
 license = "ISC"
 readme = "README.md"
