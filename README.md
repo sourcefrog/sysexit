@@ -90,7 +90,7 @@ Eric Allman invented the `sysexits.h` file in 1980.  Much of the
 documentation for this library is based on the [sysexits(3)] man
 page written by Joerg Wunsch, based on Eric’s original comments.
 The `is_reserved` and `is_valid` functions were written by Richard
-Fussenegger.
+Fussenegger.  The Rust crate was written by [Andreas Tolfsen].
 
 
 Bugs
@@ -99,6 +99,7 @@ Bugs
 The choice of an appropriate exit value is often ambigeous.
 
 
+[Andreas Tolfsen]: https://sny.no/
 [bash(1)]: https://linux.die.net/man/1/bash
 [_exit(2)]: https://man.openbsd.org/_exit.2
 [exit(3)]: https://man.openbsd.org/exit.3
