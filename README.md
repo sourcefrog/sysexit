@@ -106,11 +106,11 @@ The choice of an appropriate exit value is often ambigeous.
 [bash(1)]: https://linux.die.net/man/1/bash
 [_exit(2)]: https://man.openbsd.org/_exit.2
 [exit(3)]: https://man.openbsd.org/exit.3
-[`pub fn from_status(status: std::process::ExitStatus) -> sysexit::Code`]: https://docs.rs/sysexit/newest/fn.from_status.html
-[`pub fn is_error(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/fn.is_error.html
-[`pub fn is_reserved(n: i32) -> bool`]: https://docs.rs/sysexit/newest/fn.is_reserved.html
-[`pub fn is_success(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/fn.is_success.html
-[`pub fn is_valid(n: i32) -> bool`]: https://docs.rs/sysexit/newest/fn.is_valid.html
+[`pub fn from_status(status: std::process::ExitStatus) -> sysexit::Code`]: https://docs.rs/sysexit/newest/sysexit/fn.from_status.html
+[`pub fn is_error(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_error.html
+[`pub fn is_reserved(n: i32) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_reserved.html
+[`pub fn is_success(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_success.html
+[`pub fn is_valid(n: i32) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_valid.html
 [sendmail(8)]: https://man.openbsd.org/sendmail.8
 [`std::process::ExitStatus`]: https://doc.rust-lang.org/std/process/struct.ExitStatus.html
 [`sysexit::Code`]: https://docs.rs/sysexit/newest/enum.Code.html
