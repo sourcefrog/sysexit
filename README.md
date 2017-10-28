@@ -112,7 +112,7 @@ The choice of an appropriate exit value is often ambigeous.
 [`pub fn is_success(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/fn.is_success.html
 [`pub fn is_valid(n: i32) -> bool`]: https://docs.rs/sysexit/newest/fn.is_valid.html
 [sendmail(8)]: https://man.openbsd.org/sendmail.8
-[`std::process::ExitStatus']: https://doc.rust-lang.org/std/process/struct.ExitStatus.html
-['sysexit::Code`]: https://docs.rs/sysexit/newest/enum.Code.html
-[sysexits(3)]: https://man.openbsd.org/sysexits.3
+[`std::process::ExitStatus`]: https://doc.rust-lang.org/std/process/struct.ExitStatus.html
+[`sysexit::Code`]: https://docs.rs/sysexit/newest/enum.Code.html
+[`sysexits(3)]: https://man.openbsd.org/sysexits.3
 [`sysexit::Unknown`]: https://docs.rs/sysexit/newest/enum.Code.html#variant.Unknown
