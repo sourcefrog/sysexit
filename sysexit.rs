@@ -49,6 +49,7 @@ extern crate libc;
 use std::fmt;
 use std::i8;
 use std::process;
+use std::io;
 
 const SIGBASE: i32 = i8::MAX as i32 + 1;
 
@@ -252,6 +253,23 @@ impl From<process::ExitStatus> for Code {
     }
 }
 
+impl From<io::ErrorKind> for Code {
+    fn from(kind: io::ErrorKind) -> Self {
+        use io::ErrorKind::*;
+        match kind {
+            NotFound => Code::OsFile,
+            PermissionDenied => Code::NoPerm,
+            AddrInUse | AddrNotAvailable => Code::Unavailable,
+            ConnectionRefused | ConnectionReset | ConnectionAborted | NotConnected | BrokenPipe => {
+                Code::Protocol
+            }
+            AlreadyExists => Code::CantCreat,
+            InvalidInput | InvalidData => Code::DataErr,
+            _ => Code::IoErr,
+        }
+    }
+}
+
 /// Provides a user-friendly explanation of the exit code.
 impl fmt::Display for Code {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -362,10 +380,9 @@ pub fn is_error(status: process::ExitStatus) -> bool {
 /// Tests if the provided exit code is reserved, and has a special meaning in
 /// shells.
 pub fn is_reserved(n: i32) -> bool {
-    (Success as i32 <= n && n <= Unknown as i32) || (Usage as i32 <= n && n <= Config as i32) ||
-        (NotExecutable as i32 <= n && n <= SIGVTALRM as i32)
+    (Success as i32 <= n && n <= Unknown as i32) || (Usage as i32 <= n && n <= Config as i32)
+        || (NotExecutable as i32 <= n && n <= SIGVTALRM as i32)
 }
-
 
 /// Test if provided exit code is valid, that is within the 0–255 (inclusive)
 /// range.
