@@ -98,7 +98,7 @@ in 4.0BSD for use by the delivermail utility, later renamed to
 [sendmail(8)].  It was further expanded with fatal signals from
 [bash(1)].
 
-You can consult the <CHANGES.md> file for a record of all notable
+You can consult the [CHANGES.md] file for a record of all notable
 changes to the library.
 
 
@@ -129,7 +129,7 @@ The choice of an appropriate exit value is often ambigeous.
 [`std::process::ExitStatus`]: https://doc.rust-lang.org/std/process/struct.ExitStatus.html
 [`sysexit::Code`]: https://docs.rs/sysexit/newest/enum.Code.html
 [`sysexit::Unknown`]: https://docs.rs/sysexit/newest/enum.Code.html#variant.Unknown
-[`sysexits(3)`]: https://man.openbsd.org/sysexits.3
+[sysexits(3)]: https://man.openbsd.org/sysexits.3
 [bash(1)]: https://linux.die.net/man/1/bash
 [exit(3)]: https://man.openbsd.org/exit.3
 [sendmail(8)]: https://man.openbsd.org/sendmail.8
