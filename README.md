@@ -98,7 +98,7 @@ in 4.0BSD for use by the delivermail utility, later renamed to
 [sendmail(8)].  It was further expanded with fatal signals from
 [bash(1)].
 
-You can consult the [CHANGES.md] file for a record of all notable
+You can consult the <CHANGES.md> file for a record of all notable
 changes to the library.
 
 
