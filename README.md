@@ -1,17 +1,31 @@
 sysexit
 =======
 
-Rust module that provides exit codes for programs.
+Rust module that provides and recognises exit codes for programs.
 
 
-Synopsis
---------
+Usage
+-----
 
-Usage:
+To semantically set the exit code of a program:
 
 ```rust
+extern crate sysexit;
+
+use std::process;
+
+fn main() {
+    println!("Hello world!");
+    process::exit(sysexit::Success);
+}
+```
+
+Or to deduce the exit code of a subprocess:
+
+```rust
+	extern crate sysexit;
+
 	use std::process;
-	use sysexit;
 
 	let exit_status = process::Command::new("sh")
 	    .arg("-c").arg(format!("exit {}", 74))
