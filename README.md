@@ -98,7 +98,7 @@ in 4.0BSD for use by the delivermail utility, later renamed to
 [sendmail(8)].  It was further expanded with fatal signals from
 [bash(1)].
 
-You can consult the [CHANGES.md][] file for a record of all notable
+You can consult the [CHANGES.md] file for a record of all notable
 changes to the library.
 
 
@@ -119,16 +119,17 @@ The choice of an appropriate exit value is often ambigeous.
 
 
 [Andreas Tolfsen]: https://sny.no/
-[bash(1)]: https://linux.die.net/man/1/bash
+[CHANGES.md]: https://github.com/andreastt/sysexit/blob/master/CHANGES.md
 [_exit(2)]: https://man.openbsd.org/_exit.2
-[exit(3)]: https://man.openbsd.org/exit.3
 [`pub fn from_status(status: std::process::ExitStatus) -> sysexit::Code`]: https://docs.rs/sysexit/newest/sysexit/fn.from_status.html
 [`pub fn is_error(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_error.html
 [`pub fn is_reserved(n: i32) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_reserved.html
 [`pub fn is_success(status: std::process::ExitStatus) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_success.html
 [`pub fn is_valid(n: i32) -> bool`]: https://docs.rs/sysexit/newest/sysexit/fn.is_valid.html
-[sendmail(8)]: https://man.openbsd.org/sendmail.8
 [`std::process::ExitStatus`]: https://doc.rust-lang.org/std/process/struct.ExitStatus.html
 [`sysexit::Code`]: https://docs.rs/sysexit/newest/enum.Code.html
-[`sysexits(3)`]: https://man.openbsd.org/sysexits.3
 [`sysexit::Unknown`]: https://docs.rs/sysexit/newest/enum.Code.html#variant.Unknown
+[`sysexits(3)`]: https://man.openbsd.org/sysexits.3
+[bash(1)]: https://linux.die.net/man/1/bash
+[exit(3)]: https://man.openbsd.org/exit.3
+[sendmail(8)]: https://man.openbsd.org/sendmail.8
