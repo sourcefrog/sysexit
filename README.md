@@ -23,16 +23,16 @@ fn main() {
 Or to deduce the exit code of a subprocess:
 
 ```rust
-	extern crate sysexit;
+extern crate sysexit;
 
-	use std::process;
+use std::process;
 
-	let exit_status = process::Command::new("sh")
-	    .arg("-c").arg(format!("exit {}", 74))
-	    .status()
-	    .expect("failed to run sh(1)");
-	let exit_code = sysexit::from_status(exit_status);
-	println!("{}", exit_code);
+let exit_status = process::Command::new("sh")
+    .arg("-c").arg(format!("exit {}", 74))
+    .status()
+    .expect("failed to run sh(1)");
+let exit_code = sysexit::from_status(exit_status);
+println!("{}", exit_code);
 ```
 
 This outputs:
