@@ -30,6 +30,19 @@
 //! i/o error (74)
 //! ```
 //!
+//! [Code] may be cast to `i32` for use as an exit code:
+//!
+//! ```
+//! use std::process;
+//! use sysexit;
+//!
+//! // ...
+//! # let some_problem = false;
+//! if (some_problem) {
+//!     process::exit(sysexit::Code::Software as i32);
+//! }
+//! ```
+//!
 //! As a basis it encodes the exit codes of [sysexits(3)] from OpenBSD (64–78), exit statuses used by [bash(1)],
 //! supplemented by codes created by shells when the command is terminated
 //! by a fatal signal.  When the fatal signal is a number _N_, the latter
